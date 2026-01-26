@@ -7,8 +7,9 @@ class Student(models.Model):
     course = models.CharField(max_length=100)
     college=models.CharField(max_length=20,null=True)
     city=models.CharField(max_length=20,null=True)
-    mobile=models.IntegerField(max_length=10,null=True)
+    mobile=models.IntegerField(null=True)
     address=models.CharField(max_length=20,null=True)
     skills=models.TextField(max_length=30,null=True)
+    profile_pic=models.ImageField(null=True)
     def __str__(self):
         return self.name
